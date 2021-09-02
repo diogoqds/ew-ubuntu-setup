@@ -46,6 +46,12 @@ export alias pbcopy='xclip -selection clipboard'
 export alias pbpaste='xclip -selection clipboard -o'
 source ~/.zshrc
 
+# installing homebrew
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+
 echo 'installing vim'
 sudo apt install vim -y
 clear
@@ -209,3 +215,20 @@ echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
 sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
 sudo apt-get install -f
+
+echo 'installing sdkman'
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+echo 'installing java and clojure setup'
+sdk install java 11.0.11.j9-adpt
+sdk install leiningen                       
+sdk install clojure                       
+sdk install maven                       
+
+
+echo 'installing intellij' 
+sudo snap install intellij-idea-community --classic
+
+echo 'installing gh (github cli)'
+brew install gh
