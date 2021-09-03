@@ -232,3 +232,47 @@ sudo snap install intellij-idea-community --classic
 
 echo 'installing gh (github cli)'
 brew install gh
+
+echo 'installing discord'
+sudo snap install discord
+
+echo 'installing anki'
+sudo snap install anki-woodrow
+
+echo 'installing mailspring'
+sudo snap install mailspring
+
+echo 'installing bitwarden'
+sudo snap install bitwarden
+
+echo 'installing telegram'
+sudo snap install telegram-desktop
+
+echo 'installing notion'
+sudo snap install notion-snap
+
+echo 'installing insomnia'
+sudo snap install insomnia
+
+echo 'installing zoom'
+sudo snap install zoom-client
+
+echo 'installing goland'
+sudo snap install goland --classic
+
+echo 'installing go'
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update
+sudo apt install golang-go
+sudo apt-get install bison mercurial
+bash < <(curl -LSs 'https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer')
+. "$HOME/.gvm/scripts/gvm"
+
+echo 'installing obs'
+sudo snap install obs-studio
+
+echo 'installing android studio'
+sudo snap install android-studio --classic
+
+echo 'installing emacs'
+sudo snap install emacs --classic
