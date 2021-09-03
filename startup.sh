@@ -276,3 +276,6 @@ sudo snap install android-studio --classic
 
 echo 'installing emacs'
 sudo snap install emacs --classic
+
+#echo 'installing kinto (mac layout keys)'
+#/bin/bash -c "$(wget -qO- https://raw.githubusercontent.com/rbreaves/kinto/HEAD/install/linux.sh || curl -fsSL https://raw.githubusercontent.com/rbreaves/kinto/HEAD/install/linux.sh)"
